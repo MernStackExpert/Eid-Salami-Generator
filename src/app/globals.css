@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bkash-pink: #E2136E !important;
+  --color-bkash-deep: #D12053 !important;
+  --color-bkash-light: #FDE8EF !important;
+  --color-bkash-gray: #F5F5F5 !important;
+  --color-bkash-text: #333333 !important;
+  --color-bkash-success: #1BB954 !important;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-hind: 'Hind Siliguri', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bkash-gray);
+  color: var(--color-bkash-text);
+  font-family: var(--font-hind);
+  margin: 0;
+  padding: 0;
+}
+
+/* বিকাশ কার্ডের মূল কন্টেইনার */
+.bkash-receipt {
+  width: 360px;
+  background: white;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* টেবিল বা গ্রিডের বর্ডারগুলো ঠিক করার জন্য */
+.bkash-border-light {
+  border: 0.5px solid #ececec;
+}
+
+/* ইনপুট ফিল্ড স্টাইল */
+.bkash-input {
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 8px 0;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.bkash-input:focus {
+  border-color: var(--color-bkash-pink);
+}
+
+/* ট্রানজেকশন সেকশনের গ্রিড লাইন */
+.receipt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.receipt-grid > div {
+  padding: 12px 16px;
+  border: 0.2px solid #f0f0f0;
+}
+
+/* বাটন ইফেক্ট */
+.btn-active:active {
+  opacity: 0.8;
+  transform: scale(0.98);
 }
