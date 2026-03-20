@@ -25,7 +25,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8 text-gray-600 font-semibold text-sm">
             <Link href="/" className="hover:text-[#E2136E] transition-colors">Home</Link>
             <Link href="/salami" className="hover:text-[#E2136E] transition-colors">Generator</Link>
-            <Link href="#" className="hover:text-[#E2136E] transition-colors">Features</Link>
+            <Link href="/gorib" className="hover:text-[#E2136E] transition-colors">গরিব</Link>
             <Link href="/salami" className="bg-[#E2136E] text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:bg-[#c1105d] active:scale-95 transition-all">
               Create Now
             </Link>
@@ -61,11 +61,11 @@ export default function Navbar() {
             Generator
           </Link>
           <Link 
-            href="#" 
+            href="/gorib" 
             className="block px-3 py-4 text-gray-700 hover:bg-[#FDE8EF] hover:text-[#E2136E] rounded-xl"
             onClick={() => setIsOpen(false)}
           >
-            Features
+            গরিব
           </Link>
           <div className="pt-4">
             <Link 
